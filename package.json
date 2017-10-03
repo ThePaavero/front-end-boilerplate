@@ -8,7 +8,7 @@
     "build-css": "node-sass src/scss/main.scss public/styles.css",
     "build-js": "browserify src/js/main.js -o public/bundle.js -t [ babelify --presets [ es2015 stage-2 ] ]",
     "watch-css": "nodemon -e scss --watch src/scss -x \"npm run build-css\"",
-    "watch-js": "nodemon -e js --watch src/js -x \"npm run build-js\"",
+    "watch-js": "nodemon --no-update-notifier -e js --watch src/js -x \"npm run build-js\"",
     "watch": "concurrently --kill-others \"npm run watch-js\" \"npm run watch-css\""
   },
   "author": "",
